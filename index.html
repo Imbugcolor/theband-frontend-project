@@ -190,7 +190,8 @@
         const buyBtns = document.querySelectorAll('.js-tickets-buy');           
         const modal = document.querySelector('.js-modal');
         const closeBuy = document.querySelector('.js-modal-exits');
-        const outModal = document.querySelector('.js-modal-container')
+        const outModal = document.querySelector('.js-modal-container');
+        const closeBtn = document.querySelector('.close-btn');
         // hàm thêm thuộc tính vào class của thẻ
         function showBuyTickets(){
             modal.classList.add('open')
@@ -204,6 +205,7 @@
         }
         closeBuy.addEventListener('click',hideBuyTickets)
         modal.addEventListener('click',hideBuyTickets)
+        closeBtn.addEventListener('click',hideBuyTickets)
         outModal.addEventListener('click',function(event){
             event.stopPropagation()
         })
